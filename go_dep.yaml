@@ -16,7 +16,7 @@ spec:
       - name: go-app
         image: skinnysyddocker/gordonauth:latest
         ports:
-        - containerPort: 8080
+        - containerPort: 8082
 ---
 apiVersion: v1
 kind: Service
@@ -27,6 +27,7 @@ spec:
     app: go-app
   ports:
     - protocol: TCP
-      port: 80
-      targetPort: 8080
+      port: 8082
+      targetPort: 8082
+      NodePort: 30006
   type: NodePort
