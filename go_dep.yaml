@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: go-app
-        image: skinnysyddocker/gordonauth:latest
+        image: skinnysyddocker/gordonauth:10
         ports:
         - containerPort: 8082
 ---
